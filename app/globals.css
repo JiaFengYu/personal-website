@@ -1,0 +1,249 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-primary {
+  @apply inline-block bg-blue-600 text-white px-4 py-2 rounded-xl shadow hover:bg-blue-700 transition-colors;
+}
+.btn-secondary {
+  @apply inline-block bg-white border border-blue-600 text-blue-600 px-4 py-2 rounded-xl shadow hover:bg-blue-50 transition-colors dark:bg-gray-900 dark:text-blue-500;
+}
+
+/* Night sky background */
+.night-sky-bg {
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+/* Stars container */
+.stars-container {
+  pointer-events: none;
+}
+
+/* Stars animation using CSS */
+.stars, .stars2, .stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.stars {
+  background-image: radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 50px 160px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 160px 120px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: twinkle 10s linear infinite;
+  opacity: 0.8;
+}
+
+.stars2 {
+  background-image: radial-gradient(2px 2px at 25px 35px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 45px 75px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 55px 165px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 95px 45px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 135px 85px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 165px 125px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  animation: twinkle 15s linear infinite;
+  opacity: 0.6;
+}
+
+.stars3 {
+  background-image: radial-gradient(2px 2px at 10px 20px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 30px 60px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 40px 150px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 80px 30px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 120px 70px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(2px 2px at 150px 110px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 400px 400px;
+  animation: twinkle 20s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes twinkle {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200px);
+  }
+}
+
+/* Adjust text colors for better readability on dark background */
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Modify card backgrounds for better contrast with the night sky */
+.bg-white {
+  background-color: rgba(30, 41, 59, 0.8) !important; /* Dark blue with opacity */
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark\:bg-gray-800 {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Add a subtle glow effect to important content */
+.glow-effect {
+  box-shadow: 0 0 15px rgba(100, 149, 237, 0.5);
+}
+
+/* Footer enhancement styles */
+footer {
+  position: relative;
+  z-index: 10; /* Ensure it's above the stars background */
+  backdrop-filter: blur(5px); /* Add a blur effect behind the footer */
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3); /* Add a subtle shadow above the footer */
+}
+
+/* Add a subtle gradient overlay to make text more readable */
+.text-gradient-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Project card styling */
+.project-card {
+  background-color: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional star layers for depth */
+.stars4 {
+  background-image: radial-gradient(1px 1px at 15px 25px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(1px 1px at 35px 65px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(1px 1px at 45px 155px, #fff, rgba(0,0,0,0)), 
+                    radial-gradient(1px 1px at 85px 35px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 350px 350px;
+  animation: twinkle 25s linear infinite;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Occasional "shooting star" effect */
+.shooting-star {
+  position: absolute;
+  top: 50%;
+  left: -100px;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+  animation: shooting 10s linear infinite;
+  opacity: 0;
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0) rotate(45deg);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    transform: translateX(200px) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Force navbar to stay white with black text */
+nav {
+  background-color: white !important;
+  color: black !important;
+}
+
+nav a {
+  color: #1a202c !important; /* dark gray */
+}
+
+nav a:hover {
+  color: black !important;
+  text-decoration: underline;
+}
+
+/* Extra insurance against color inheritance */
+.navbar-override {
+  --tw-text-opacity: 1 !important;
+  color: rgba(0, 0, 0, var(--tw-text-opacity)) !important;
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity)) !important;
+}
+
+.navbar-link {
+  --tw-text-opacity: 1 !important;
+  color: rgba(31, 41, 55, var(--tw-text-opacity)) !important;
+}
+
+.navbar-link:hover {
+  --tw-text-opacity: 1 !important;
+  color: rgba(0, 0, 0, var(--tw-text-opacity)) !important;
+}
+
+/* Add to your globals.css for mathematical notation */
+
+/* Math styling */
+sup {
+  font-size: 0.65em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* Link styling for the GIMPS page */
+.prose a {
+  color: #a5b4fc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* List styling for GIMPS page */
+.prose ul, .prose ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
