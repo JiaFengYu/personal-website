@@ -11,15 +11,15 @@ export const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex space-x-6">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/JiaFengYu" target="_blank" rel="noopener noreferrer" 
                className="text-white hover:text-indigo-200 transition-colors">
               GitHub
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/jiafeng-yu/" target="_blank" rel="noopener noreferrer"
                className="text-white hover:text-indigo-200 transition-colors">
               LinkedIn
             </a>
-            <a href="mailto:your-email@example.com"
+            <a href="mailto:jaydenyu2001@gmail.com"
                className="text-white hover:text-indigo-200 transition-colors">
               Contact
             </a>

@@ -8,16 +8,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "highland-farm-simulator",
-    title: "Highland Farm Simulator",
-    summary: "A 3-D Unity farm sim focused on Highland cattle husbandry & sustainable homesteading.",
+    slug: "orbit-simulator",
+    title: "NASA Satellite Orbit Simulator",
+    summary: "Rust backend that fetches NASA Orbital data and simulates live satellite trajetories.",
     cover: "/images/farm-sim.jpg",
     status: "wip",
   },
   {
     slug: "mersenne-cluster",
-    title: "Distributed Mersenne Prime Cluster",
-    summary: "Custom Kubernetes cluster that auto-scales Prime95 workloads across spot instances.",
+    title: "Mersenne Primes Sidecar",
+    summary: "Custom sidecar built in Rust to track mprime progress holistically.",
     cover: "/images/mersenne.jpg",
     status: "completed",
   },

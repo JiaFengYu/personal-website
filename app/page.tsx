@@ -34,10 +34,10 @@ export default function HomePage() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-extrabold mb-4 text-white"
         >
-          Hi, I'm Jayden.
+          Hi! I'm Jayden.
         </motion.h1>
         <p className="text-lg text-gray-200">
-          Mathematics & Computer Science grad • Software Engineer • Aspiring homesteader
+          Computer Science & Pure Mathematics New Grad • Software Engineer • Recreational Athlete
         </p>
         <div className="mt-6 flex justify-center gap-4">
           <Link 
